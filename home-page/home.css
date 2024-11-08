@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: black;
+    background-image: url(../public/pexels-pixabay-247676.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Centro para el contenedor */
+}
+
+.welcome{
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 500px;
+}
+
+.welcome p{
+    font-size: 20px;
+    color: white;
+}
+
+h1{
+    color: white;
+    font-size: 5rem;
+    gap: 100px;
+}
+
+/* Estilos para misión */
+.mision {
+    background-color: #eef1f5;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mision h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.mision p {
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+}
+
+/* Sección "¿Por qué Elegirnos?" */
+.choose-us-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.choose-us {
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.choose-us h3 {
+    font-size: 1.5rem;
+    color: #0b3d91;
+    margin-bottom: 0.5rem;
+}
+
+.choose-us p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Sección de equipo */
+.team {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5rem; /* Aumenté el tamaño del título */
+    color: #0b3d91;
+    margin-bottom: 1rem;
+}
+
+.container-team {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.person {
+    padding: 1rem;
+    text-align: center;
+}
+
+.person img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.person h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.person p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: rgb(3, 136, 219);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Adaptabilidad para dispositivos móviles */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    .choose-us-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
