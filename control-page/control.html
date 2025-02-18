@@ -11,66 +11,44 @@
     <header>
         <div class="logo">TRIWEATHSTONE</div>
         <nav>
-            <a href="../index.html">Home</a>
-            <a href="#team">Team</a>
-            <a href="profile-page/profile.html">Profile</a>
-            <a href="control-page/control.html">Panel Control</a>
-            <a href="documantation-page/documentation.html">Documentation</a>
+            <a href="../index.html">Inicio</a>
+            <a href="control-page/control.html">Panel de Control</a>
+            <a href="documantation-page/documentation.html">Documentación</a>
         </nav>
     </header>
     <main>
-        <textarea id="output" rows="10" cols="30"></textarea>
-
         <div class="temperature">-- °C</div>
         <section class="controls">
             <div class="container-connc-mode">
                 <div class="connection">
-                    <h3>Connection</h3>
-                    <button id="connect">Conectar</button>
-                    <button id="disconnect" disabled>Desconectar</button>
+                    <h3>Conexión</h3>
+                    <div>                    
+                        <button id="connect">Conectar</button>
+                        <button id="disconnect" disabled>Desconectar</button>
+                    </div>
                 </div>
                 <div class="mode-selection">
-                    <h3>Seleccione el modo deseado</h3>
-                    <button id="auto-mode">Automático</button>
-                    <button id="manual-mode">Manual</button>
-                    <p id="mode-label">Modo: Automatico</p>
+                    <h3>Seleccione el modo</h3>
+                    <div>
+                        <button id="auto-mode">Automático</button>
+                        <button id="manual-mode">Manual</button>
+                    </div>
                 </div>
             </div>
             <div class="curve-display">
-                <h3>Curva de calor</h3>
+                <h2>Curva de calor</h2>
                 <div id="heat-curve">
                     <form id="curve-form">
-                        <input type="number" id="preheat1-temp" placeholder="Preheat 1 Temperature (°C)" required>
-                        <input type="number" id="preheat2-temp" placeholder="Preheat 2 Temperature (°C)" required>
-                        <input type="number" id="peak-temp" placeholder="Peak Temperature (°C)" required>
-                        <input type="number" id="cooling-temp" placeholder="Cooling Temperature (°C)" required>
+                        <input type="number" id="preheat1-temp" placeholder="Precalentamiento 1 (°C)" required>
+                        <input type="number" id="preheat2-temp" placeholder="Precalentamiento 2 (°C)" required>
+                        <input type="number" id="peak-temp" placeholder="Pico de Temperatura (°C)" required>
+                        <input type="number" id="cooling-temp" placeholder="Enfriamiento (°C)" required>
                         <button type="submit">Send Curve</button>
                     </form>
                     <canvas id="curve-preview-chart"></canvas>
                 </div>
             </div>
-        </section>
-        <section class="recommendations">
-            <h2>Recommendations for SMD Soldering</h2>
-            <div class="container-cards">
-              <div class="card">
-                <h2>PREHEAT N°1</h2>
-                <p>The temperature should be in the range 150 - 180 to avoid thermal shock.</p>
-              </div>
-              <div class="card">
-                  <h2>PREHEAT N°2</h2>
-                  <p>Stabilize at 180-200°C for moisture removal before reflow.</p>
-              </div>
-              <div class="card">
-                  <h2>PEAK TEMPERATURE</h2>
-                  <p>230-250°C to melt solder without damaging components.</p>
-              </div>
-              <div class="card">
-                  <h2>COOLING</h2>
-                  <p>Cooling should gradually reduce the temperature to solidify the solder at a rate of 3-5°C per second.</p>
-              </div>
-            </div>
-        </section>
+        </section> 
     </main>
     <script type="module" src="control.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

@@ -27,3 +27,14 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
+header {
+    background: rgba(3, 136, 219, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(3, 136, 219, 0.2);
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}

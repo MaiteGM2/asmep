@@ -1,3 +1,4 @@
+import { updateTemperatureCurve } from "./heat-curve.js";
 import { sendData } from "./output-data.js";
 
 const isValidTemperature = (temp, min, max) => {
@@ -6,6 +7,7 @@ const isValidTemperature = (temp, min, max) => {
 
 export const sendAutoMode = () => {
     console.log('mode auto')
+    updateTemperatureCurve([preheat1, preheat2, peak, cooling]);
     sendData('Mode: automatico');
 };
 
@@ -21,6 +23,7 @@ export const sendManualMode = () => {
         isValidTemperature(peak, 230, 250) &&
         isValidTemperature(cooling, 150, 180)
     ) {
+        updateTemperatureCurve([preheat1, preheat2, peak, cooling]);
         sendData('Mode: manual');
         sendData(`{"heatCurve": [${preheat1}, ${preheat2}, ${peak}, ${cooling}]}`);
     } else {

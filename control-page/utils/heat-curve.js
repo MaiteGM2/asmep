@@ -9,7 +9,7 @@ export function chartData() {
             labels: [0, 1, 2, 3], // Puntos de tiempo predeterminados
             datasets: [{
                 label: 'Heat Curve (°C)',
-                data: [0, 0, 0, 0], // Curva de calor vacía
+                data: [130, 200, 280, 50], // Curva de calor vacía
                 borderColor: 'rgb(3, 136, 219)',
                 borderWidth: 2,
                 fill: false
@@ -38,7 +38,7 @@ export function chartData() {
 export function updateTemperatureCurve(curveData) {
    if (Array.isArray(curveData) && curveData.length === 4) {
         const times = [0, 1, 2, 3]; // Tiempo predeterminado
-
+        console.log('actualizado', curveData);
         // Actualizar el gráfico con los nuevos datos
         chart.data.labels = times;
         chart.data.datasets[0].data = curveData;
